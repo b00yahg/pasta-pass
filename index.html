@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Olive Garden Pasta Pass Club!!1!</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00);
+            font-family: "Comic Sans MS", cursive;
+            text-align: center;
+            animation: backgroundShift 5s infinite;
+        }
+        @keyframes backgroundShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        h1 {
+            font-size: 48px;
+            color: #ff0000;
+            text-shadow: 2px 2px #00ff00, 4px 4px #0000ff;
+            animation: rainbow 2s linear infinite;
+        }
+        @keyframes rainbow {
+            0% { color: red; }
+            14% { color: orange; }
+            28% { color: yellow; }
+            42% { color: green; }
+            56% { color: blue; }
+            70% { color: indigo; }
+            84% { color: violet; }
+            100% { color: red; }
+        }
+        .blink {
+            animation: blinker 0.5s linear infinite;
+        }
+        @keyframes blinker {
+            50% { opacity: 0; }
+        }
+        .spin {
+            display: inline-block;
+            animation: spinner 5s linear infinite;
+        }
+        @keyframes spinner {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .pasta-image {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            animation: wobble 3s ease-in-out infinite;
+        }
+        @keyframes wobble {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(20px); }
+        }
+        #pasta-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="blink">CONGRADULATIONS!!!1!!</h1>
+    <h2>You are now a member of the <span class="spin">ULTIMATE</span> Olive Garden Pasta Pass Club!</h2>
+    <p style="font-size: 24px; color: #ff00ff;">Have you been depressed? Have you been suffering from anxiousness?</p>
+    <p style="font-size: 36px; color: #00ff00;">Well anxious no more!</p>
+    <p style="font-size: 28px; color: #0000ff;">You will now get <span class="blink">FREE PASTA FOR LIFE!</span></p>
+    <div id="pasta-container">
+        <img src="https://i.ibb.co/tQ6YY0X/Tour-of-Italy-gv-590-X365.webp" alt="Delicious Alfredo" class="pasta-image">
+        <img src="https://i.ibb.co/r47WgJW/soup-array-dpv-590x365.webp" alt="Fregalicious Soup" class="pasta-image">
+        <img src="https://i.ibb.co/r0sVV2h/images.jpg" alt="Your Dreams Coming True!!" class="pasta-image">
+    </div>
+    <p style="font-size: 32px; color: #ff0000;">All for the taking. Consume olive garden. Enjoy olive garden.</p>
+    <h3 style="font-size: 48px; color: #00ffff;" class="blink">Olive garden is life</h3>
+    <marquee scrollamount="20" style="font-size: 24px; color: #ffff00;">Join now and get a FREE* set of unlimited breadsticks!!! *Limited to 999 per visit</marquee>
+    <script>
+        function createPastaRain() {
+            const pasta = document.createElement('div');
+            pasta.innerHTML = '🍝';
+            pasta.style.position = 'fixed';
+            pasta.style.left = Math.random() * 100 + 'vw';
+            pasta.style.top = '-20px';
+            pasta.style.fontSize = '30px';
+            pasta.style.animationDuration = Math.random() * 3 + 2 + 's';
+            pasta.style.opacity = Math.random();
+            pasta.style.animation = 'fall linear infinite';
+            document.body.appendChild(pasta);
+            
+            setTimeout(() => {
+                pasta.remove();
+            }, 5000);
+        }
+
+        setInterval(createPastaRain, 200);
+
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fall {
+                to {
+                    transform: translateY(105vh);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
